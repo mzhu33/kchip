@@ -2,13 +2,10 @@
 
 python 3 code
 
-## Process for analyzing 5-channel data
-- Find droplets from 5-channel images.
-- Split the droplets by UV bin
-- Save each the droplets in each bin separately to a csv file
-- Import each csv file individually into the Interactive Clustering notebook and assign clusters
-- Save csv’s from Interactive Clustering for each UV bin
-- Bring those back into the Analysis notebook, concatenate them, and name the final DataFrame “droplets”
-- Proceed with post-merge image analysis
-- Do distance and area filtering
-- Save the final DataFrame as a csv with the format: “YYYYMMDD_experimentName_trimmed_distance_and_area_filtered.csv”
+## UPDATES
+20220323 @mzhu33
+- fluorescence and phase compatible
+- bchip pairing using min distance method
+- droplet sizes dependent on pixel size, objective, and binning
+- nd2 export scripts added
+- main notebook and config files updated
