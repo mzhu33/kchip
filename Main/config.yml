@@ -1,0 +1,52 @@
+barcodes:
+  cluster:
+    eps: 0.02
+    min_samples: 4
+    offset:
+    - 0
+    - 0
+    - 0
+    points_to_cluster: 2000
+  path: ../notes/Notes_group1_pa1g1.xlsx
+image:
+  1to1_bkg: 20220322_background_blue
+  base_path: ../data/
+  base_path2: ../data/
+  bins: 1
+  bugs: 3
+  dyes:
+  - 0
+  - 1
+  - 2
+  names:
+    premerge: 20220322_pa1_g1_chip1_premerge
+    t0: 20220322_pa1_g1_chip1_t0
+  objective: 1
+  overlap: 0.1
+  phase:
+    use_phase: 0
+  pixel_size: 4.25
+  rescale:
+  - 1.0
+  - 1.0
+  - 1.5
+  - 1
+  rescale_text:
+  - '15857.00'
+  - '16030.00'
+  - '11011.00'
+  - Reporter
+  - '1'
+  size: 2960
+  well_start_image:
+  - 1
+  - 2
+  well_start_xy:
+  - 540
+  - 140
+well_mask:
+  filename: ../kchip_py3/Well_Masks/k2_mask.tif
+  pixel_size: 8.33625
+  well_start_xy:
+  - 850
+  - 522
