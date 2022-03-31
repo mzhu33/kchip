@@ -42,6 +42,11 @@ def find_droplets(config,image,threshold=0.53,show=1):
     # 1) Find mask based on thresholding summed image
     mask = threshold_image(image,threshold=0.15)
     edges = sobel(mask)
+    
+    if config['image']['objective']>1:
+        threshold=0.25
+    else:
+        threshold=0.53
 
     # 2) Hough transform to find droplets
 

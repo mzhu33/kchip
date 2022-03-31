@@ -11,6 +11,7 @@ from pathos.multiprocessing import ProcessingPool as Pool
 import kchip.droplets as drop
 import kchip.matchmask as matchmask
 import kchip.io as kchip_io
+import kchip.phase as ph
 import kchip.cluster as cluster
 import kchip.register as reg
 

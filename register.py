@@ -40,8 +40,11 @@ def register(config,img_tuple,t='premerge',t2='t0'):
     # Read images
     pre_img = kchip_io.read(config, x=img_tuple[0],y=img_tuple[1],t=t)
     post_img = kchip_io.read(config, x=img_tuple[0],y=img_tuple[1],t=t2)
-
-    slices = np.delete(np.arange(pre_img.shape[2]),config['image']['bugs'])
+    
+    if config['image']['phase']['use_phase']:
+        slices = np.delete(np.arange(pre_img.shape[2]),config['image']['phase']['phase_idx'])
+    else:
+        slices = np.delete(np.arange(pre_img.shape[2]),config['image']['bugs'])
 
     shift,error,diffphase = register_translation(pre_img[:,:,slices], post_img[:,:,slices])
     return shift[:-1]
